@@ -1,26 +1,35 @@
-# Ayasha Portfolio (God-Level Starter)
+# Ayasha Portfolio (React + GitHub Pages)
 
-A premium, animated single-page portfolio for a Full Stack Developer.
+Modern React portfolio with dark/light mode and data-driven project cards.
 
-## Quick Start
-
-Just open `index.html` in your browser.
-
-Or run a local server:
+## Local Dev
 
 ```bash
-python3 -m http.server 8080
-# open http://localhost:8080
+npm install
+npm run dev
 ```
+
+## Build
+
+```bash
+npm run build
+```
+
+## Deploy (GitHub Pages)
+
+Deployment is automatic via GitHub Actions on every push to `master`.
+
+### One-time GitHub setting
+In your repo settings:
+1. Go to **Settings → Pages**
+2. Under **Build and deployment**, choose **Source: GitHub Actions**
+
+Then push any commit and your site will go live at:
+
+`https://ayasha25.github.io/ayasha-portfolio/`
 
 ## Customize
 
-- Update projects in `index.html`
-- Edit colors/spacing in `styles.css`
-- Replace contact email in the contact section
-
-## Deploy
-
-- GitHub Pages
-- Netlify
-- Vercel (static)
+- Edit portfolio content in `src/App.jsx`
+- Manage projects in `src/projects.js`
+- Tweak design tokens in `src/styles.css`
