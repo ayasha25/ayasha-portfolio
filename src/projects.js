@@ -1,23 +1,23 @@
 export const projects = [
   {
-    title: 'PulseBoard',
-    type: 'SaaS',
+    title: 'RankFlow Commerce',
+    type: 'E-Commerce / SEO',
     year: '2026',
-    description: 'Analytics dashboard with role-based auth, event pipelines, and real-time charts.',
-    tags: ['React', 'Node.js', 'PostgreSQL']
+    description: 'Next.js storefront with server-side rendering, structured data, and technical SEO optimizations that improved organic traffic and conversion rates.',
+    tags: ['Next.js', 'Tailwind CSS', 'SEO', 'PostgreSQL']
   },
   {
-    title: 'NovaCart',
-    type: 'E-Commerce',
+    title: 'PulseBoard',
+    type: 'SaaS',
     year: '2025',
-    description: 'Headless commerce platform with resilient checkout and admin automation.',
-    tags: ['React', 'Stripe', 'Redis']
+    description: 'Analytics dashboard with role-based auth, real-time insights, and reusable React components tailored for product teams.',
+    tags: ['React', 'Node.js', 'TypeScript', 'Redis']
   },
   {
     title: 'DeployPilot',
     type: 'DevTools',
     year: '2025',
-    description: 'CI/CD assistant with one-click previews and workflow templates for teams.',
-    tags: ['TypeScript', 'Docker', 'GitHub Actions']
+    description: 'Workflow automation platform featuring preview deployments, pipeline templates, and CI integrations for faster release cycles.',
+    tags: ['React', 'Express', 'Docker', 'GitHub Actions']
   }
 ]

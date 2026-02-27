@@ -1,6 +1,17 @@
 import { useMemo, useState } from 'react'
 import { projects } from './projects'
 
+const skillPills = [
+  'React',
+  'Next.js',
+  'Tailwind CSS',
+  'SEO',
+  'TypeScript',
+  'Node.js',
+  'Express',
+  'PostgreSQL'
+]
+
 export default function App() {
   const [theme, setTheme] = useState('dark')
   const year = useMemo(() => new Date().getFullYear(), [])
@@ -8,7 +19,10 @@ export default function App() {
   return (
     <div className={`app ${theme}`}>
       <div className="noise" />
-      <header className="nav container">
+      <div className="orb orb-1" />
+      <div className="orb orb-2" />
+
+      <header className="nav container glass">
         <a href="#" className="brand">Ayasha<span>25</span></a>
         <nav>
           <a href="#projects">Projects</a>
@@ -28,23 +42,28 @@ export default function App() {
         <section className="hero container">
           <p className="kicker">FULL STACK DEVELOPER</p>
           <h1>
-            Building <span className="gradient">clean backends</span> and{' '}
-            <span className="gradient-2">beautiful frontends</span> that scale.
+            I build <span className="gradient">high-converting web products</span> with{' '}
+            <span className="gradient-2">frontend polish + backend reliability</span>.
           </h1>
           <p className="subtitle">
-            I craft performant web products with JavaScript/TypeScript, modern frameworks,
-            and thoughtful UX. From API design to pixel-perfect UI — I ship end-to-end.
+            Full-stack dev focused on React + Next.js experiences, Tailwind-powered UI systems,
+            scalable APIs, and SEO-first architecture that helps products rank and grow.
           </p>
+
           <div className="cta-row">
             <a className="btn primary" href="#projects">View Projects</a>
-            <a className="btn ghost" href="#contact">Let’s Build</a>
+            <a className="btn ghost" href="#contact">Hire Me</a>
+          </div>
+
+          <div className="skills-row">
+            {skillPills.map((skill) => <span key={skill}>{skill}</span>)}
           </div>
         </section>
 
         <section id="projects" className="container section">
           <div className="section-head">
             <h2>Featured Projects</h2>
-            <p>Data-driven cards from `src/projects.js`.</p>
+            <p>Product-focused builds with modern stack choices.</p>
           </div>
           <div className="project-grid">
             {projects.map((p) => (
@@ -64,25 +83,25 @@ export default function App() {
         </section>
 
         <section id="stack" className="container section">
-          <div className="section-head"><h2>Stack</h2></div>
+          <div className="section-head"><h2>Tech Stack</h2></div>
           <div className="stack-grid glass">
-            <div><strong>Frontend</strong><p>React, Next.js, Tailwind, TypeScript</p></div>
-            <div><strong>Backend</strong><p>Node.js, Express, Java, Spring Boot</p></div>
-            <div><strong>Database</strong><p>PostgreSQL, MongoDB, Redis</p></div>
-            <div><strong>Cloud & DevOps</strong><p>Docker, CI/CD, AWS, Vercel</p></div>
+            <div><strong>Frontend</strong><p>React, Next.js, Tailwind CSS, TypeScript</p></div>
+            <div><strong>Backend</strong><p>Node.js, Express, REST APIs, Java, Spring Boot</p></div>
+            <div><strong>Data Layer</strong><p>PostgreSQL, MongoDB, Redis</p></div>
+            <div><strong>Performance & SEO</strong><p>Core Web Vitals, Metadata, Structured Data, SSR/SSG</p></div>
           </div>
         </section>
 
         <section id="contact" className="container section contact glass">
-          <h2>Let’s build something people love.</h2>
-          <p>Available for full-time roles, freelance, and collabs.</p>
+          <h2>Let’s build something fast, beautiful, and discoverable.</h2>
+          <p>Open to full-time roles, freelance, and product collaborations.</p>
           <a className="btn primary" href="mailto:ayasha@example.com">Email Me</a>
         </section>
       </main>
 
       <footer className="container footer">
         <span>© {year} Ayasha Pandey</span>
-        <span>Made with ambition and caffeine ☕</span>
+        <span>Designed + developed with ambition and caffeine ☕</span>
       </footer>
     </div>
   )
